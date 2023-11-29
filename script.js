@@ -7,7 +7,6 @@ request.onload = function () {
   var result = JSON.parse(request.response);
   console.log(result);
 
-  for (i = 0; i <= result.length - 1; i++) {
     var continentsResult = result.filter((ele) => ele.continents == "Asia");
     var continentsResult = continentsResult.map((ele) => ele.continents);
     console.log(continentsResult);
@@ -42,5 +41,5 @@ request.onload = function () {
     var currencyResult = result.filter((ele) => (ele.currencies = "USD"));
     var currencyResult = result.map((ele) => ele.name.common);
     console.log(currencyResult);
-  }
+  
 };
